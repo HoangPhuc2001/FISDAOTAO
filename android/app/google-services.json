@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548956994087",
+    "project_id": "testnotification-4cb83",
+    "storage_bucket": "testnotification-4cb83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548956994087:android:a34eb9f8dc59338e472c02",
+        "android_client_info": {
+          "package_name": "com.fisinsight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548956994087-9ehrnbk9fs1m8bj09rcbd02gd82dsikm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAETXQvq3y25GJw202UdRkrUrXp2XKiU-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548956994087-9ehrnbk9fs1m8bj09rcbd02gd82dsikm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

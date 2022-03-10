@@ -1,0 +1,13 @@
+//Login
+export const POST_LOGIN = 'POST_LOGIN';
+export const DID_LOGIN_ACTION = 'DID_LOGIN_ACTION';
+export const SIGNIN_SUCCESS = 'SIGNIN_SUCCESS';
+export const SIGNIN_ERROR = 'SIGNIN_ERROR';
+
+
+
+// get du lieu building room
+export const GET_BUILDING_ROOM = 'GET_BUILDING_ROOM'
+export const GET_BUILDING_ROOM_SUCCESS = 'GET_BUILDING_ROOM_SUCCESS'
+export const GET_BUILDING_ROOM_ERROR = 'GET_BUILDING_ROOM_ERROR'
+

@@ -1,0 +1,1497 @@
+    {
+    "Message": "Get data successfully.",
+    "Data": {
+        "processId": 16,
+        "processName": "CBNV Đặt lịch tuần",
+        "description": "Quy trình đặt phòng/xe",
+        "ticket_template": {
+            "individual": [
+                {
+                    "valuefeeder": "TicketOwner",
+                    "controlType": "text",
+                    "refs": [],
+                    "display": false,
+                    "name": "Ten nguoi dung khi dang nhap",
+                    "additionalDisplayClass": "left-info",
+                    "id": -11000,
+                    "text": "fis.vt.nv1",
+                    "type": "text",
+                    "conditions": {
+                        "required": false
+                    },
+                    "nameText": "Ten nguoi dung khi dang nhap",
+                    "value": "fis.vt.nv1"
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "display": false,
+                    "name": "Ticket con",
+                    "id": -109999,
+                    "position": -109999,
+                    "text": "0",
+                    "type": "text",
+                    "conditions": {
+                        "required": false
+                    },
+                    "nameText": "Ticket con",
+                    "value": 0
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "display": false,
+                    "name": "ticket room id",
+                    "id": -109989,
+                    "position": -109989,
+                    "text": "",
+                    "type": "text",
+                    "conditions": {
+                        "required": false
+                    },
+                    "nameText": "ticket room id",
+                    "value": ""
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "display": false,
+                    "id": -109990,
+                    "position": -109990,
+                    "text": "3",
+                    "type": "text",
+                    "conditions": {
+                        "locationRelated": true,
+                        "required": false
+                    },
+                    "nameText": "",
+                    "value": "3"
+                },
+                {
+                    "display": false,
+                    "dataFrom": -11000,
+                    "dataFromCondition": [
+                        {
+                            "conditions": {
+                                "operation": "else"
+                            },
+                            "value": {
+                                "infoId": -11000,
+                                "dataset": "INDIVIDUAL"
+                            }
+                        }
+                    ],
+                    "mdConfig": {
+                        "children": [
+                            {
+                                "name": "master_data_b1_alluserapi_userleader",
+                                "id": -9860
+                            },
+                            {
+                                "name": "master_data_b1_alluserapi_depid",
+                                "id": -109995
+                            },
+                            {
+                                "name": "master_data_b1_alluserapi_userid",
+                                "id": -109998
+                            },
+                            {
+                                "name": "master_data_b1_alluserapi_machinephase",
+                                "id": -109996
+                            },
+                            {
+                                "name": "master_data_b1_alluserapi_vehicleleadercar",
+                                "id": -9759
+                            },
+                            {
+                                "name": "master_data_b1_alluserapi_orgid",
+                                "id": -109994
+                            },
+                            {
+                                "name": "master_data_b1_alluserapi_secretary",
+                                "id": -9954
+                            }
+                        ]
+                    },
+                    "type": "master_data_b1_alluserapi",
+                    "nameText": "UserName",
+                    "controlType": "combobox",
+                    "refs": [],
+                    "name": "UserName",
+                    "id": -10999,
+                    "position": -10999,
+                    "text": "",
+                    "conditions": {
+                        "required": false
+                    },
+                    "dataFromFunc": "feederData"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "UserId",
+                    "mdConfig": {
+                        "parents": [
+                            {
+                                "name": "master_data_b1_alluserapi",
+                                "id": -10999,
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "id": -109998,
+                    "position": -109998,
+                    "text": "",
+                    "type": "master_data_b1_alluserapi_userid",
+                    "conditions": {
+                        "required": false
+                    },
+                    "nameText": "UserId"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "chánh văn phòng",
+                    "additionalDisplayClass": "left-info",
+                    "mdConfig": {},
+                    "id": -109997,
+                    "position": -109997,
+                    "text": "",
+                    "type": "master_data_get_systhesis",
+                    "conditions": {
+                        "required": false,
+                        "autoselect": true
+                    },
+                    "nameText": "chánh văn phòng"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "master data admin",
+                    "additionalDisplayClass": "left-info",
+                    "mdConfig": {
+                        "parents": [
+                            {
+                                "name": "master_data_b1_alluserapi",
+                                "id": -10999,
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "id": -109996,
+                    "position": -109996,
+                    "text": "",
+                    "conditions": {
+                        "required": false
+                    },
+                    "type": "master_data_b1_alluserapi_machinephase",
+                    "nameText": "master data admin"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "departmentId",
+                    "additionalDisplayClass": "left-info",
+                    "mdConfig": {
+                        "parents": [
+                            {
+                                "name": "master_data_b1_alluserapi",
+                                "id": -10999,
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "id": -109995,
+                    "position": -109995,
+                    "text": "",
+                    "conditions": {
+                        "required": false
+                    },
+                    "type": "master_data_b1_alluserapi_depid",
+                    "nameText": "departmentId"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "orgId",
+                    "additionalDisplayClass": "left-info",
+                    "mdConfig": {
+                        "parents": [
+                            {
+                                "name": "master_data_b1_alluserapi",
+                                "id": -10999,
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "id": -109994,
+                    "position": -109994,
+                    "text": "",
+                    "conditions": {
+                        "required": false
+                    },
+                    "type": "master_data_b1_alluserapi_orgid",
+                    "nameText": "orgId"
+                },
+                {
+                    "controlType": "select",
+                    "displayConfig": {
+                        "children": [
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "2",
+                                    "idCondition": -10000
+                                },
+                                "childId": -9995,
+                                "childItemType": "select"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "3",
+                                    "idCondition": -10000
+                                },
+                                "childId": -9990,
+                                "childItemType": "number"
+                            }
+                        ]
+                    },
+                    "refs": [],
+                    "name": "Tần suất họp",
+                    "additionalDisplayClass": "left-info",
+                    "id": -10000,
+                    "position": -10000,
+                    "text": "",
+                    "type": "select",
+                    "conditions": {
+                        "data": [
+                            {
+                                "text": "Một lần",
+                                "value": "1"
+                            },
+                            {
+                                "text": "Hàng tuần",
+                                "value": "2"
+                            },
+                            {
+                                "text": "Hàng tháng",
+                                "value": "3"
+                            }
+                        ],
+                        "required": true
+                    },
+                    "nameText": "Tần suất họp"
+                },
+                {
+                    "controlType": "select",
+                    "refs": [],
+                    "name": "Thứ trong tuần",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9995,
+                    "position": -9995,
+                    "text": "",
+                    "type": "select",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "2",
+                            "idCondition": -10000
+                        },
+                        "data": [
+                            {
+                                "text": "",
+                                "value": ""
+                            },
+                            {
+                                "text": "Thứ 2",
+                                "value": "MON"
+                            },
+                            {
+                                "text": "Thứ 3",
+                                "value": "TUE"
+                            },
+                            {
+                                "text": "Thứ 4",
+                                "value": "WED"
+                            },
+                            {
+                                "text": "Thứ 5",
+                                "value": "THU"
+                            },
+                            {
+                                "text": "Thứ 6",
+                                "value": "FRI"
+                            },
+                            {
+                                "text": "Thứ 7",
+                                "value": "SAT"
+                            },
+                            {
+                                "text": "Chủ nhật",
+                                "value": "SUN"
+                            }
+                        ],
+                        "required": true,
+                        "clearData": true
+                    },
+                    "nameText": "Thứ trong tuần",
+                    "value": ""
+                },
+                {
+                    "controlType": "number",
+                    "refs": [],
+                    "name": "Ngày trong tháng",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9990,
+                    "position": -9995,
+                    "text": "",
+                    "type": "number",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "3",
+                            "idCondition": -10000
+                        },
+                        "min": 1,
+                        "max": 31,
+                        "max-length": "2",
+                        "required": true,
+                        "clearData": true
+                    },
+                    "nameText": "Ngày trong tháng"
+                },
+                {
+                    "valuefeeder": "now",
+                    "controlType": "date",
+                    "refs": [],
+                    "display": false,
+                    "name": "now",
+                    "id": -9985,
+                    "text": "19/10/2021",
+                    "type": "date",
+                    "nameText": "now",
+                    "conditions": {
+                        "format": {
+                            "regex": "DD/MM/YYYY",
+                            "text": "dd/MM/yyyy"
+                        }
+                    },
+                    "value": "19/10/2021"
+                },
+                {
+                    "valuefeeder": "now",
+                    "controlType": "date",
+                    "refs": [],
+                    "name": "Ngày bắt đầu",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9980,
+                    "position": -9980,
+                    "text": "19/10/2021",
+                    "type": "date",
+                    "conditions": {
+                        "min": {
+                            "data-config": {
+                                "infoId": -9985,
+                                "dataset": "INDIVIDUAL"
+                            },
+                            "type": "date"
+                        },
+                        "format": {
+                            "regex": "DD/MM/YYYY",
+                            "text": "Nhập dd/MM/yyyy"
+                        },
+                        "required": true
+                    },
+                    "nameText": "Ngày bắt đầu",
+                    "value": "19/10/2021"
+                },
+                {
+                    "controlType": "time",
+                    "refs": [],
+                    "name": "Giờ bắt đầu",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9975,
+                    "position": -9975,
+                    "text": "",
+                    "type": "time",
+                    "conditions": {
+                        "format": {
+                            "regex": "HH:mm",
+                            "text": "HH:mm"
+                        },
+                        "required": true
+                    },
+                    "nameText": "Giờ bắt đầu"
+                },
+                {
+                    "controlType": "date",
+                    "refs": [],
+                    "name": "Ngày kết thúc",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9970,
+                    "position": -9970,
+                    "text": "",
+                    "type": "date",
+                    "conditions": {
+                        "min": {
+                            "data-config": {
+                                "infoId": -9980,
+                                "dataset": "INDIVIDUAL"
+                            },
+                            "type": "date"
+                        },
+                        "format": {
+                            "regex": "DD/MM/YYYY",
+                            "text": "Nhập dd/MM/yyyy"
+                        },
+                        "required": true
+                    },
+                    "nameText": "Ngày kết thúc"
+                },
+                {
+                    "controlType": "time",
+                    "refs": [],
+                    "name": "Giờ kết thúc",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9965,
+                    "position": -9965,
+                    "text": "",
+                    "type": "time",
+                    "conditions": {
+                        "format": {
+                            "regex": "HH:mm",
+                            "text": "HH:mm"
+                        },
+                        "required": true
+                    },
+                    "nameText": "Giờ kết thúc"
+                },
+                {
+                    "controlType": "select",
+                    "displayConfig": {
+                        "children": [
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "2",
+                                    "idCondition": -9960,
+                                    "clearData": true
+                                },
+                                "childId": -9950,
+                                "childItemType": "text"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "2",
+                                    "idCondition": -9960,
+                                    "clearData": false
+                                },
+                                "childId": -9850,
+                                "childItemType": "splitter"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "2",
+                                    "idCondition": -9960,
+                                    "clearData": true
+                                },
+                                "childId": -9855,
+                                "childItemType": "select"
+                            }
+                        ]
+                    },
+                    "refs": [],
+                    "name": "Địa điểm",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9960,
+                    "position": -10500,
+                    "text": "",
+                    "type": "select",
+                    "conditions": {
+                        "data": [
+                            {
+                                "text": "Họp tại trụ sở",
+                                "value": "1"
+                            },
+                            {
+                                "text": "Địa điểm khác",
+                                "value": "2"
+                            }
+                        ]
+                    },
+                    "nameText": "Địa điểm"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "Chọn trụ sở",
+                    "additionalDisplayClass": "left-info",
+                    "mdConfig": {},
+                    "id": -9953,
+                    "position": -10500,
+                    "text": "",
+                    "type": "master_data_location_office",
+                    "conditions": {
+                        "autoSelect": true,
+                        "required": true
+                    },
+                    "nameText": "Chọn trụ sở"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "Lấy danh sách thư ký",
+                    "additionalDisplayClass": "left-info",
+                    "mdConfig": {
+                        "parents": [
+                            {
+                                "name": "master_data_b1_alluserapi",
+                                "id": -10999,
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "id": -9954,
+                    "position": -9954,
+                    "text": "",
+                    "type": "master_data_b1_alluserapi_secretary",
+                    "conditions": {},
+                    "nameText": "Lấy danh sách thư ký"
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Địa điểm khác",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9950,
+                    "position": -10490,
+                    "text": "",
+                    "type": "text",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "2",
+                            "idCondition": -9960,
+                            "clearData": true
+                        },
+                        "data": [],
+                        "max-length": "300",
+                        "required": true
+                    },
+                    "nameText": "Địa điểm khác"
+                },
+                {
+                    "controlType": "checkbox",
+                    "refs": [],
+                    "name": "Chọn ở đây nếu sử dụng máy chiếu",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9945,
+                    "position": -9945,
+                    "text": "",
+                    "type": "checkbox",
+                    "nameText": "Chọn ở đây nếu sử dụng máy chiếu",
+                    "value": ""
+                },
+                {
+                    "controlType": "checkbox",
+                    "refs": [],
+                    "name": "Chọn ở đây nếu là Hội nghị truyền hình",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9940,
+                    "position": -9940,
+                    "text": "",
+                    "type": "checkbox",
+                    "nameText": "Chọn ở đây nếu là Hội nghị truyền hình",
+                    "value": ""
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Đơn vị chủ trì",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9935,
+                    "position": -9935,
+                    "text": "",
+                    "type": "text",
+                    "conditions": {
+                        "max-length": "60",
+                        "required": true
+                    },
+                    "nameText": "Đơn vị chủ trì",
+                    "value": ""
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Đơn vị chuẩn bị",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9925,
+                    "position": -9930,
+                    "text": "",
+                    "type": "text",
+                    "conditions": {
+                        "max-length": "60",
+                        "required": true
+                    },
+                    "nameText": "Đơn vị chuẩn bị"
+                },
+                {
+                    "controlType": "textarea",
+                    "refs": [],
+                    "name": "Nội dung",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9930,
+                    "position": -9925,
+                    "text": "",
+                    "type": "textarea",
+                    "conditions": {
+                        "max-length": "3000",
+                        "required": true
+                    },
+                    "nameText": "Nội dung"
+                },
+                {
+                    "controlType": "upload",
+                    "refs": [],
+                    "name": "Attach file",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9905,
+                    "position": -9905,
+                    "text": "",
+                    "type": "upload",
+                    "conditions": {},
+                    "nameText": "Attach file"
+                },
+                {
+                    "controlType": "select",
+                    "refs": [],
+                    "name": "Loại cuộc họp",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9890,
+                    "position": -9890,
+                    "text": "",
+                    "type": "select",
+                    "conditions": {
+                        "data": [
+                            {
+                                "text": "Thường",
+                                "value": "1"
+                            },
+                            {
+                                "text": "Giao Ban",
+                                "value": "2"
+                            }
+                        ],
+                        "required": true
+                    },
+                    "nameText": "Loại cuộc họp",
+                    "value": ""
+                },
+                {
+                    "controlType": "select",
+                    "refs": [],
+                    "name": "Lịch công tác",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9880,
+                    "position": -9880,
+                    "text": "",
+                    "type": "select",
+                    "conditions": {
+                        "data": [
+                            {
+                                "text": "",
+                                "value": ""
+                            },
+                            {
+                                "text": "Lãnh đạo",
+                                "value": "3"
+                            },
+                            {
+                                "text": "Các ban",
+                                "value": "2"
+                            },
+                            {
+                                "text": "Khác",
+                                "value": "1"
+                            }
+                        ],
+                        "required": true
+                    },
+                    "nameText": "Lịch công tác",
+                    "value": ""
+                },
+                {
+                    "controlType": "number",
+                    "refs": [],
+                    "name": "Số người dự họp",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9870,
+                    "position": -9875,
+                    "text": "",
+                    "type": "number",
+                    "conditions": {
+                        "min": 1,
+                        "max": 999,
+                        "required": true
+                    },
+                    "nameText": "Số người dự họp"
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Email gửi thêm",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9875,
+                    "position": -9870,
+                    "text": "",
+                    "type": "text",
+                    "conditions": {
+                        "required": false
+                    },
+                    "nameText": "Email gửi thêm"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "Lãnh đạo đơn vị",
+                    "additionalDisplayClass": "right-info",
+                    "mdConfig": {
+                        "parents": [
+                            {
+                                "name": "master_data_b1_alluserapi",
+                                "id": -10999,
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "id": -9860,
+                    "position": -9860,
+                    "text": "",
+                    "type": "master_data_b1_alluserapi_userleader",
+                    "conditions": {
+                        "required": true
+                    },
+                    "nameText": "Lãnh đạo đơn vị"
+                },
+                {
+                    "controlType": "splitter",
+                    "refs": [],
+                    "name": "Thông tin đặt xe",
+                    "id": -9850,
+                    "position": -9856,
+                    "text": "",
+                    "type": "splitter",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "2",
+                            "idCondition": -9960,
+                            "clearData": false
+                        }
+                    },
+                    "nameText": "Thông tin đặt xe",
+                    "collapse": false
+                },
+                {
+                    "controlType": "select",
+                    "displayConfig": {
+                        "children": [
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9845,
+                                "childItemType": "text"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9840,
+                                "childItemType": "text"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9825,
+                                "childItemType": "select"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9805,
+                                "childItemType": "date"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9800,
+                                "childItemType": "time"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9795,
+                                "childItemType": "date"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9790,
+                                "childItemType": "time"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9770,
+                                "childItemType": "number"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "1",
+                                    "idCondition": -9855,
+                                    "clearData": false
+                                },
+                                "childId": -9765,
+                                "childItemType": "text"
+                            }
+                        ]
+                    },
+                    "refs": [],
+                    "name": "Đặt xe",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9855,
+                    "position": -9855,
+                    "text": "Không đặt xe",
+                    "type": "select",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "2",
+                            "idCondition": -9960,
+                            "clearData": true
+                        },
+                        "data": [
+                            {
+                                "text": "Không đặt xe",
+                                "value": "0"
+                            },
+                            {
+                                "text": "Đặt xe",
+                                "value": "1"
+                            }
+                        ],
+                        "required": true
+                    },
+                    "nameText": "Đặt xe",
+                    "value": "0"
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Địa điểm xuất phát",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9845,
+                    "position": -9845,
+                    "text": "69 Đinh Tiên Hoàng",
+                    "type": "text",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "max-length": "300",
+                        "required": true
+                    },
+                    "nameText": "Địa điểm xuất phát",
+                    "value": "69 Đinh Tiên Hoàng"
+                },
+                {
+                    "dataFrom": -9950,
+                    "dataFromCondition": [
+                        {
+                            "conditions": {
+                                "operation": "else"
+                            },
+                            "value": {
+                                "infoId": -9950,
+                                "dataset": "INDIVIDUAL"
+                            }
+                        }
+                    ],
+                    "type": "text",
+                    "nameText": "Địa điểm tới",
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Địa điểm tới",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9840,
+                    "position": -9840,
+                    "text": "",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "max-length": "300",
+                        "required": true
+                    },
+                    "dataFromFunc": "feederData"
+                },
+                {
+                    "dataFrom": -10000,
+                    "dataFromCondition": [
+                        {
+                            "conditions": {
+                                "operation": "else"
+                            },
+                            "value": {
+                                "infoId": -10000,
+                                "dataset": "INDIVIDUAL"
+                            }
+                        }
+                    ],
+                    "type": "select",
+                    "nameText": "Tần suất đặt xe",
+                    "controlType": "select",
+                    "displayConfig": {
+                        "children": [
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "2",
+                                    "idCondition": -9825,
+                                    "clearData": false
+                                },
+                                "childId": -9820,
+                                "childItemType": "select"
+                            },
+                            {
+                                "displayCondition": {
+                                    "valueCondition": "3",
+                                    "idCondition": -9825,
+                                    "clearData": false
+                                },
+                                "childId": -9815,
+                                "childItemType": "text"
+                            }
+                        ]
+                    },
+                    "refs": [],
+                    "name": "Tần suất đặt xe",
+                    "disabled": true,
+                    "additionalDisplayClass": "left-info",
+                    "id": -9825,
+                    "position": -9825,
+                    "text": "",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "data": [
+                            {
+                                "text": "Một lần",
+                                "value": "1"
+                            },
+                            {
+                                "text": "Hàng tuần",
+                                "value": "2"
+                            },
+                            {
+                                "text": "Hàng tháng",
+                                "value": "3"
+                            }
+                        ],
+                        "required": true
+                    },
+                    "dataFromFunc": "feederData"
+                },
+                {
+                    "dataFrom": -9995,
+                    "dataFromCondition": [
+                        {
+                            "conditions": {
+                                "operation": "else"
+                            },
+                            "value": {
+                                "infoId": -9995,
+                                "dataset": "INDIVIDUAL"
+                            }
+                        }
+                    ],
+                    "type": "select",
+                    "nameText": "Thứ trong tuần đặt xe",
+                    "controlType": "select",
+                    "refs": [],
+                    "name": "Thứ trong tuần đặt xe",
+                    "disabled": false,
+                    "additionalDisplayClass": "left-info",
+                    "id": -9820,
+                    "position": -9820,
+                    "text": "",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "2",
+                            "idCondition": -9825,
+                            "clearData": false
+                        },
+                        "data": [
+                            {
+                                "text": "",
+                                "value": ""
+                            },
+                            {
+                                "text": "Thứ 2",
+                                "value": "MON"
+                            },
+                            {
+                                "text": "Thứ 3",
+                                "value": "TUE"
+                            },
+                            {
+                                "text": "Thứ 4",
+                                "value": "WED"
+                            },
+                            {
+                                "text": "Thứ 5",
+                                "value": "THU"
+                            },
+                            {
+                                "text": "Thứ 6",
+                                "value": "FRI"
+                            },
+                            {
+                                "text": "Thứ 7",
+                                "value": "SAT"
+                            },
+                            {
+                                "text": "Chủ nhật",
+                                "value": "SUN"
+                            }
+                        ],
+                        "required": true
+                    },
+                    "value": "",
+                    "dataFromFunc": "feederData"
+                },
+                {
+                    "dataFrom": -9990,
+                    "dataFromCondition": [
+                        {
+                            "conditions": {
+                                "operation": "else"
+                            },
+                            "value": {
+                                "infoId": -9990,
+                                "dataset": "INDIVIDUAL"
+                            }
+                        }
+                    ],
+                    "type": "text",
+                    "nameText": "Ngày trong tháng đặt xe",
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Ngày trong tháng đặt xe",
+                    "disabled": false,
+                    "additionalDisplayClass": "left-info",
+                    "id": -9815,
+                    "position": -9820,
+                    "text": "",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "3",
+                            "idCondition": -9825,
+                            "clearData": false
+                        },
+                        "max-length": "2",
+                        "required": true
+                    },
+                    "dataFromFunc": "feederData"
+                },
+                {
+                    "valuefeeder": "now",
+                    "controlType": "date",
+                    "refs": [],
+                    "display": false,
+                    "name": "now1",
+                    "id": -9810,
+                    "text": "19/10/2021",
+                    "type": "date",
+                    "nameText": "now1",
+                    "conditions": {
+                        "format": {
+                            "regex": "DD/MM/YYYY",
+                            "text": "dd/MM/yyyy"
+                        }
+                    },
+                    "value": "19/10/2021"
+                },
+                {
+                    "dataFrom": -9980,
+                    "dataFromCondition": [
+                        {
+                            "conditions": {
+                                "operation": "else"
+                            },
+                            "value": {
+                                "infoId": -9980,
+                                "dataset": "INDIVIDUAL"
+                            }
+                        }
+                    ],
+                    "type": "date",
+                    "nameText": "Ngày đi",
+                    "valuefeeder": "now",
+                    "controlType": "date",
+                    "refs": [],
+                    "name": "Ngày đi",
+                    "disabled": false,
+                    "additionalDisplayClass": "left-info",
+                    "id": -9805,
+                    "position": -9805,
+                    "text": "19/10/2021",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "min": {
+                            "data-config": {
+                                "infoId": -9810,
+                                "dataset": "INDIVIDUAL"
+                            },
+                            "type": "date"
+                        },
+                        "format": {
+                            "regex": "DD/MM/YYYY",
+                            "text": "dd/MM/yyyy"
+                        },
+                        "required": true
+                    },
+                    "value": "19/10/2021",
+                    "dataFromFunc": "feederData"
+                },
+                {
+                    "controlType": "time",
+                    "refs": [],
+                    "name": "Giờ đi",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9800,
+                    "position": -9800,
+                    "text": "",
+                    "type": "time",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "format": {
+                            "regex": "HH:mm",
+                            "text": "HH:mm"
+                        },
+                        "required": true
+                    },
+                    "nameText": "Giờ đi"
+                },
+                {
+                    "dataFrom": -9970,
+                    "dataFromCondition": [
+                        {
+                            "conditions": {
+                                "operation": "else"
+                            },
+                            "value": {
+                                "infoId": -9970,
+                                "dataset": "INDIVIDUAL"
+                            }
+                        }
+                    ],
+                    "type": "date",
+                    "nameText": "Ngày về",
+                    "controlType": "date",
+                    "refs": [],
+                    "name": "Ngày về",
+                    "disabled": false,
+                    "additionalDisplayClass": "left-info",
+                    "id": -9795,
+                    "position": -9795,
+                    "text": "",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "min": {
+                            "data-config": {
+                                "infoId": -9810,
+                                "dataset": "INDIVIDUAL"
+                            },
+                            "type": "date"
+                        },
+                        "format": {
+                            "regex": "DD/MM/YYYY",
+                            "text": "dd/MM/yyyy"
+                        },
+                        "required": true
+                    },
+                    "dataFromFunc": "feederData"
+                },
+                {
+                    "controlType": "time",
+                    "refs": [],
+                    "name": "Giờ về",
+                    "additionalDisplayClass": "right-info",
+                    "id": -9790,
+                    "position": -9790,
+                    "text": "",
+                    "type": "time",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "format": {
+                            "regex": "HH:mm",
+                            "text": "HH:mm"
+                        },
+                        "required": true
+                    },
+                    "nameText": "Giờ về"
+                },
+                {
+                    "controlType": "number",
+                    "refs": [],
+                    "name": "Số chỗ",
+                    "additionalDisplayClass": "left-info",
+                    "id": -9770,
+                    "position": -9770,
+                    "text": "",
+                    "type": "number",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "min": 1,
+                        "max": 999,
+                        "required": true
+                    },
+                    "nameText": "Số chỗ"
+                },
+                {
+                    "staticContent": "<p style='font-size: 12px; color: #000000'><i>Họ và tên, số điện thoại người liên hệ...</i></p>",
+                    "controlType": "text",
+                    "refs": [],
+                    "name": "Người liên hệ",
+                    "additionalDisplayClass": "left-info",
+                    "staticContentText": "<p style='font-size: 12px; color: #000000'><i>Họ và tên, số điện thoại người liên hệ...</i></p>",
+                    "id": -9765,
+                    "position": -9765,
+                    "text": "",
+                    "type": "text",
+                    "conditions": {
+                        "displayCondition": {
+                            "valueCondition": "1",
+                            "idCondition": -9855,
+                            "clearData": false
+                        },
+                        "max-length": "300",
+                        "required": true
+                    },
+                    "nameText": "Người liên hệ"
+                },
+                {
+                    "controlType": "combobox",
+                    "refs": [],
+                    "display": false,
+                    "name": "Người phê duyệt xe",
+                    "additionalDisplayClass": "right-info",
+                    "mdConfig": {
+                        "parents": [
+                            {
+                                "name": "master_data_b1_alluserapi",
+                                "id": -10999,
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "id": -9759,
+                    "position": -9759,
+                    "text": "",
+                    "type": "master_data_b1_alluserapi_vehicleleadercar",
+                    "conditions": {
+                        "required": true
+                    },
+                    "nameText": "Người phê duyệt xe"
+                },
+                {
+                    "controlType": "text",
+                    "refs": [],
+                    "display": false,
+                    "name": "create type",
+                    "disabled": true,
+                    "additionalDisplayClass": "left-info",
+                    "id": -9873,
+                    "position": -6007,
+                    "text": "1",
+                    "type": "text",
+                    "nameText": "create type",
+                    "value": "1"
+                }
+            ],
+            "multitable": [
+                {
+                    "columns": [
+                        {
+                            "controlType": "text",
+                            "refs": [],
+                            "name": "Tên",
+                            "additionalDisplayClass": "left-info",
+                            "id": -9907,
+                            "position": -9907,
+                            "text": "",
+                            "type": "text",
+                            "conditions": {
+                                "max-length": "30"
+                            },
+                            "nameText": "Tên",
+                            "value": "",
+                            "parentId": "-9908"
+                        },
+                        {
+                            "controlType": "number",
+                            "refs": [],
+                            "name": "Số điện thoại",
+                            "additionalDisplayClass": "left-info",
+                            "id": -9906,
+                            "position": -9906,
+                            "text": "",
+                            "type": "number",
+                            "conditions": {
+                                "max": 999999999999999
+                            },
+                            "nameText": "Số điện thoại",
+                            "value": "",
+                            "parentId": "-9908"
+                        },
+                        {
+                            "controlType": "number",
+                            "refs": [],
+                            "name": "CMTND/CCCD",
+                            "additionalDisplayClass": "left-info",
+                            "id": -9905,
+                            "position": -9905,
+                            "text": "",
+                            "type": "number",
+                            "conditions": {
+                                "max": 999999999999999
+                            },
+                            "nameText": "CMTND/CCCD",
+                            "value": "",
+                            "parentId": "-9908"
+                        }
+                    ],
+                    "name": "Danh sách khách mời",
+                    "id": -9908,
+                    "position": -9858,
+                    "nameText": "Danh sách khách mời",
+                    "parentId": 1
+                },
+                {
+                    "columns": [
+                        {
+                            "controlType": "text",
+                            "refs": [],
+                            "name": "Tiền tố",
+                            "additionalDisplayClass": "left-info",
+                            "id": -9745,
+                            "position": -9745,
+                            "text": "",
+                            "type": "text",
+                            "conditions": {
+                                "max-length": "150"
+                            },
+                            "nameText": "Tiền tố",
+                            "value": "",
+                            "parentId": "-9750"
+                        },
+                        {
+                            "mdConfig": {},
+                            "type": "master_data_getparticipantorgdept",
+                            "nameText": "Thành phần tham gia nội bộ",
+                            "parentId": "-9750",
+                            "controlType": "combobox",
+                            "refs": [],
+                            "name": "Thành phần tham gia nội bộ",
+                            "additionalDisplayClass": "left-info",
+                            "id": -9740,
+                            "position": -9740,
+                            "text": "",
+                            "conditions": {
+                                "multiple": true,
+                                "max-length": "300"
+                            },
+                            "value": ""
+                        },
+                        {
+                            "controlType": "text",
+                            "refs": [],
+                            "name": "Thành phần tham gia khác",
+                            "additionalDisplayClass": "left-info",
+                            "id": -9735,
+                            "position": -9735,
+                            "text": "",
+                            "type": "text",
+                            "conditions": {
+                                "max-length": "300"
+                            },
+                            "nameText": "Thành phần tham gia khác",
+                            "value": "",
+                            "parentId": "-9750"
+                        }
+                    ],
+                    "name": "Thành phần tham gia cuộc họp",
+                    "id": -9750,
+                    "position": -9859,
+                    "nameText": "Thành phần tham gia cuộc họp",
+                    "parentId": 2
+                }
+            ]
+        },
+        "hideInformTo": true,
+        "last_modified_process": "2021-09-26 16:49:09.0"
+    },
+    "DefaultSubject": "CBNV Đặt lịch tuần",
+    "ResultCode": 200
+}
